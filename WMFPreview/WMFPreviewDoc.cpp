@@ -110,6 +110,10 @@ void WMFPreviewDoc::SetSearchContent(CString& value)
 
 BOOL WMFPreviewDoc::GetThumbnail(UINT cx, HBITMAP* phbmp, WTS_ALPHATYPE* pdwAlpha)
 {
+	return CAtlDocumentImpl::GetThumbnail(cx, phbmp, pdwAlpha);
+
+/*	Instead of the above line, replacement function below; CreateCompatibleBitmap() uses the original DC, not the compatible dc
+
 	// In case no valid WMF was loaded return
 	if (m_hMetaFile == NULL) return FALSE;
 
@@ -158,7 +162,7 @@ BOOL WMFPreviewDoc::GetThumbnail(UINT cx, HBITMAP* phbmp, WTS_ALPHATYPE* pdwAlph
 
 	ReleaseDC(NULL, hdc);
 
-	return FALSE;
+	return FALSE;*/
 }
 
 BOOL WMFPreviewDoc::DrawWMF(HDC hdc, LPRECT lprcBounds, COLORREF clrBack)
