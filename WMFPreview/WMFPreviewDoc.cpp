@@ -179,7 +179,7 @@ BOOL WMFPreviewDoc::DrawWMF(HDC hdc, LPRECT lprcBounds, COLORREF clrBack)
 
 			HBRUSH hDrawBrush = CreateSolidBrush(clrBack);
 
-			// Fill background with white
+			// Fill background
 			FillRect(memDC, lprcBounds, hDrawBrush);
 
 			RECT crect;
