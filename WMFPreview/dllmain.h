@@ -1,8 +1,5 @@
 // dllmain.h : Declaration of module class.
 
-#include "Gdiplus.h"
-
-using namespace Gdiplus;
 
 class CWMFPreviewModule : public ATL::CAtlDllModuleT< CWMFPreviewModule >
 {
